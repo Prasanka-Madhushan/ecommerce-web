@@ -47,9 +47,9 @@ const Products = () => {
                 <CardMedia
                   component="img"
                   sx={{
-                    height: 150, // Adjusted height for smaller images
-                    objectFit: 'contain', // Ensures the entire image is visible without cropping
-                    padding: 2, // Adds some spacing around the image
+                    height: 150,
+                    objectFit: 'contain',
+                    padding: 2,
                   }}
                   image={product.image}
                   alt={product.name}

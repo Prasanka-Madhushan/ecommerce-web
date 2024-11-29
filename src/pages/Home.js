@@ -202,7 +202,7 @@ const Home = () => {
     <Box
       sx={{
         minHeight: '100vh',
-        backgroundImage: 'url(https://i.postimg.cc/QMv0DbCZ/b.jpg)', // Replace with your image URL
+        backgroundImage: 'url(https://i.postimg.cc/QMv0DbCZ/b.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         display: 'flex',
