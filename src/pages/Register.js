@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { Box, TextField, Button, Typography, Container, Card, CardContent } from '@mui/material';
 
 const Register = () => {
   const { login } = useAuth();
@@ -18,51 +19,91 @@ const Register = () => {
         .required('Password is required'),
     }),
     onSubmit: (values) => {
-      login(values.email);
-      navigate('/products');
+      login(values.email); // Simulate user login after registration
+      navigate('/products'); // Redirect to products page
     },
   });
 
   return (
-    <div>
-      <h1>Register</h1>
-      <form onSubmit={formik.handleSubmit}>
-        <div>
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            value={formik.values.name}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-          {formik.touched.name && formik.errors.name && <div>{formik.errors.name}</div>}
-        </div>
-        <div>
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-          {formik.touched.email && formik.errors.email && <div>{formik.errors.email}</div>}
-        </div>
-        <div>
-          <label>Password</label>
-          <input
-            type="password"
-            name="password"
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-          {formik.touched.password && formik.errors.password && <div>{formik.errors.password}</div>}
-        </div>
-        <button type="submit">Register</button>
-      </form>
-    </div>
+    <Box
+      sx={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundImage: 'url(https://i.postimg.cc/QMv0DbCZ/b.jpg)', // Replace with your image
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <Container maxWidth="sm">
+        <Card
+          sx={{
+            padding: 4,
+            borderRadius: 2,
+            boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          }}
+        >
+          <CardContent>
+            <Typography variant="h4" textAlign="center" gutterBottom>
+              Register
+            </Typography>
+            <form onSubmit={formik.handleSubmit}>
+              <Box sx={{ marginBottom: 3 }}>
+                <TextField
+                  label="Name"
+                  variant="outlined"
+                  fullWidth
+                  name="name"
+                  value={formik.values.name}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  error={formik.touched.name && Boolean(formik.errors.name)}
+                  helperText={formik.touched.name && formik.errors.name}
+                />
+              </Box>
+              <Box sx={{ marginBottom: 3 }}>
+                <TextField
+                  label="Email"
+                  variant="outlined"
+                  fullWidth
+                  name="email"
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  error={formik.touched.email && Boolean(formik.errors.email)}
+                  helperText={formik.touched.email && formik.errors.email}
+                />
+              </Box>
+              <Box sx={{ marginBottom: 3 }}>
+                <TextField
+                  label="Password"
+                  variant="outlined"
+                  fullWidth
+                  type="password"
+                  name="password"
+                  value={formik.values.password}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  error={formik.touched.password && Boolean(formik.errors.password)}
+                  helperText={formik.touched.password && formik.errors.password}
+                />
+              </Box>
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                fullWidth
+                sx={{ padding: 1, fontSize: '1rem', fontWeight: 600 }}
+              >
+                Register
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
+      </Container>
+    </Box>
   );
 };
 

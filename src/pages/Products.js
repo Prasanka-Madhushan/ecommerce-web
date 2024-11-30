@@ -11,7 +11,7 @@ const products = [
   { id: 6, name: 'Stainless Steel Quartz Analog Chain Casual Watch for Men Women Black White', price: 280, description: 'Affordable and efficient', image: 'https://i.postimg.cc/YS619nc1/10.webp' },
   { id: 7, name: 'Stay Fashionable and Functional with Comfortable Cargo Pants for Women', price: 520, description: 'High-quality item', image: 'https://i.postimg.cc/qRYMdrmQ/6.webp' },
   { id: 8, name: 'Yfashion Men Cotton T-shirt Summer Short Sleeve Loose Bottoming Shirt Fashion', price: 680, description: 'Durable and reliable', image: 'https://i.postimg.cc/8kMjVJS6/4.webp' },
-  { id: 9, name: 'I Just Baked You Some Cakes Mother Cat Print T Shirts Men Fashion Summer Hip Hop', price: 3500, description: 'Affordable and efficient', image: 'https://i.postimg.cc/zvtQQD0X/3.webp' },
+  { id: 9, name: 'I Just Baked You Some Cakes Mother Cat Print T Shirts Men Fashion Summer Hip Hop', price: 350, description: 'Affordable and efficient', image: 'https://i.postimg.cc/zvtQQD0X/3.webp' },
 ];
 
 const Products = () => {
