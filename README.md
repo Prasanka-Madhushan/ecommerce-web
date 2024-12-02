@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# E-Commerce Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the E-Commerce Website! This is a React-based e-commerce application with features like user authentication, a shopping cart, and responsive design. It provides an engaging shopping experience with a modern UI.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+1. **User Authentication**:
+   - Secure login and registration.
+   - Protected routes to ensure only logged-in users can access certain pages.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Product Listing**:
+   - Displays a list of products with images, descriptions, and prices.
+   - Responsive grid layout for seamless browsing.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Shopping Cart**:
+   - Add products to the cart.
+   - Update quantities and remove items.
+   - View the total cost.
 
-### `npm test`
+4. **Modern Design**:
+   - Clean and user-friendly interface.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **Protected Routes**:
+   - Restricts access to the products and cart pages for unauthenticated users.
 
-### `npm run build`
+6. **Hover Effects**:
+   - Interactive hover effects on cards for features and testimonials.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+7. **Responsive Navigation**:
+   - Navigation bar with dynamic rendering.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+- **Frontend**: React, React Router DOM, Material-UI (MUI)
+- **State Management**: React Context API
+- **Validation**: Formik and Yup
+- **Languages**: JavaScript, HTML, CSS
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Before you begin, ensure you have the following installed:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/ecommerce-website.git
 
-### Code Splitting
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd ecommerce-website
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+   Or, if you use Yarn:
+   ```bash
+   yarn install
+   ```
 
-### Analyzing the Bundle Size
+4. **Start the Application**:
+   ```bash
+   npm start
+   ```
+   Or, with Yarn:
+   ```bash
+   yarn start
+   ```
+  
+5. **Open in Browser: Visit http://localhost:3000 to view the application.**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## How to Use
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **User Registration**:
+   - Navigate to the Register page and create a new account.
+   - Enter your name, email, and password.
 
-### Advanced Configuration
+2. **Login**:
+   - Use your credentials to log in.
+   - Only authenticated users can access the products and cart pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. **Browse Products**:
+   - Explore the product list on the Products page.
+   - Add items to your cart.
 
-### Deployment
+4. **Shopping Cart**:
+   - View added products in the Cart.
+   - Update quantities or remove items as needed.
+   
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
+This project is licensed under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Author
+
+Prasanka Madhushan: https://github.com/Prasanka-Madhushan
+
+---
