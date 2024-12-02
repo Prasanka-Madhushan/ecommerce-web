@@ -21,6 +21,7 @@ Welcome to the E-Commerce Website! This is a React-based e-commerce application 
 
 4. **Modern Design**:
    - Clean and user-friendly interface.
+   - Fully responsive for both mobile and desktop devices.
 
 5. **Protected Routes**:
    - Restricts access to the products and cart pages for unauthenticated users.
