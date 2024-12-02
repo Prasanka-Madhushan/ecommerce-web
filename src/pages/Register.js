@@ -20,7 +20,7 @@ const Register = () => {
     }),
     onSubmit: (values) => {
       login(values.email); // Simulate user login after registration
-      navigate('/products'); // Redirect to products page
+      navigate('/products'); 
     },
   });
 
@@ -31,7 +31,7 @@ const Register = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundImage: 'url(https://i.postimg.cc/QMv0DbCZ/b.jpg)', // Replace with your image
+        backgroundImage: 'url(https://i.postimg.cc/QMv0DbCZ/b.jpg)', 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

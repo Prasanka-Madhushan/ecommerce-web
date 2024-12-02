@@ -17,7 +17,7 @@ const Login = () => {
     }),
     onSubmit: (values) => {
       login(values.email); // Simulate login
-      navigate('/products'); // Redirect to Products page
+      navigate('/products'); 
     },
   });
 
@@ -28,7 +28,7 @@ const Login = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundImage: 'url(https://i.postimg.cc/QMv0DbCZ/b.jpg)', // Replace with your desired image
+        backgroundImage: 'url(https://i.postimg.cc/QMv0DbCZ/b.jpg)', 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
