@@ -55,7 +55,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/ecommerce-website.git
+   git clone https://github.com/Prasanka-Madhushan/ecommerce-web.git
 
 2. **Navigate to the Project Directory**:
    ```bash
