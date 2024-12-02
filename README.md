@@ -23,13 +23,17 @@ Welcome to the E-Commerce Website! This is a React-based e-commerce application 
    - Clean and user-friendly interface.
    - Fully responsive for both mobile and desktop devices.
 
-5. **Protected Routes**:
+5. **Search and Filter Products**:
+   - Users can drag the slider to set a minimum and maximum price.
+   - Search the products by entering the name in the search box.
+     
+6. **Protected Routes**:
    - Restricts access to the products and cart pages for unauthenticated users.
 
-6. **Hover Effects**:
+7. **Hover Effects**:
    - Interactive hover effects on cards for features and testimonials.
 
-7. **Responsive Navigation**:
+8. **Responsive Navigation**:
    - Navigation bar with dynamic rendering.
 
 ---
