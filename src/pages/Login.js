@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import { Box, TextField, Button, Typography, Container, Card, CardContent } from '@mui/material';
+import { Box, TextField, Button, Typography, Container, Card, CardContent, Snackbar, Alert } from '@mui/material';
 
 const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
+  const [successMessage, setSuccessMessage] = useState(false);
 
   const formik = useFormik({
     initialValues: { email: '', password: '' },
@@ -17,7 +18,10 @@ const Login = () => {
     }),
     onSubmit: (values) => {
       login(values.email); // Simulate login
-      navigate('/products'); 
+      setSuccessMessage(true); // Show success feedback
+      setTimeout(() => {
+        navigate('/products');
+      }, 1200);
     },
   });
 
@@ -88,6 +92,21 @@ const Login = () => {
           </CardContent>
         </Card>
       </Container>
+      {/* Success Snackbar */}
+      <Snackbar
+        open={successMessage}
+        autoHideDuration={2000}
+        onClose={() => setSuccessMessage(false)}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      >
+        <Alert
+          onClose={() => setSuccessMessage(false)}
+          severity="success"
+          sx={{ width: '100%' }}
+        >
+          Login Successful!
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };

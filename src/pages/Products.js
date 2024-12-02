@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
-import { Grid, Card, CardMedia, CardContent, CardActions, Typography, Button, Container, Box } from '@mui/material';
+import { Grid, Card, CardMedia, CardContent, CardActions, Typography, Button, Container, Box, TextField, Slider, InputAdornment, } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
 
 const products = [
   { id: 1, name: 'Summer New Round Neck Short sleeved T-shirt Top Clothes for Fashion Brand', price: 100, description: 'High-quality item', image: 'https://i.postimg.cc/dVQZqssj/1.webp' },
@@ -17,6 +18,18 @@ const products = [
 const Products = () => {
   const { addToCart } = useCart();
 
+  // States for search and filter
+  const [searchQuery, setSearchQuery] = useState('');
+  const [priceRange, setPriceRange] = useState([0, 1000]);
+
+  // Filtered Products
+  const filteredProducts = products.filter(
+    (product) =>
+      product.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+      product.price >= priceRange[0] &&
+      product.price <= priceRange[1]
+  );
+
   return (
     <Box
       sx={{
@@ -25,14 +38,54 @@ const Products = () => {
         backgroundPosition: 'center',
         display: 'flex',
         py: 4,
+        flexDirection: 'column',
+        alignItems: 'center',
       }}
     >
       <Container sx={{ bgcolor: 'transparent', padding: 6, borderRadius: 2 }}>
-        <Typography variant="h4" gutterBottom textAlign="center" color='black' fontWeight={600}>
+        <Typography variant="h4" gutterBottom textAlign="center" color="black" fontWeight={600}>
           Our Products
         </Typography>
+
+        {/* Search and Filter Section */}
+        <Box sx={{ display: 'column', gap: 2, mb: 2, flexWrap: 'wrap', justifyContent: 'right' }}>
+          {/* Search Input */}
+          <TextField
+            label="Search Products"
+            variant="outlined"
+            size="small"
+            sx={{ width: '300px' }}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon />
+                </InputAdornment>
+              ),
+            }}
+          />
+
+          {/* Price Range Slider */}
+          <Box sx={{ width: '300px' }}>
+            <Typography id="price-slider" gutterBottom mt={2}>
+              Price Range
+            </Typography>
+            <Slider
+              value={priceRange}
+              onChange={(e, newValue) => setPriceRange(newValue)}
+              valueLabelDisplay="auto"
+              min={0}
+              max={1000}
+              step={50}
+              sx={{ mt: 0 }}
+            />
+          </Box>
+        </Box>
+
+        {/* Products Grid */}
         <Grid container spacing={4}>
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <Grid item key={product.id} xs={12} sm={6} md={4}>
               <Card
                 sx={{
