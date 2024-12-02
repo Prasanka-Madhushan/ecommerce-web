@@ -54,7 +54,7 @@ const Products = () => {
             label="Search Products"
             variant="outlined"
             size="small"
-            sx={{ width: '300px' }}
+            sx={{ width: '310px' }}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             InputProps={{
